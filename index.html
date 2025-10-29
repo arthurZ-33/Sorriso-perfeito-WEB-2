@@ -3,76 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorriso perfeito</title>
+    <title>Sorriso Perfeito | Consultório Odontológico de Excelência</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
     <header>
-        <h2>Sorriso perfeito</h2>
-    <nav>
-    <a href="#home">Home</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#depoimentos">Depoimentos</a>
-    <a href="#contatos">Contatos</a>
-    </nav>    
+        <p class="logo">Sorriso Perfeito</p>
+        <button class="menu-toggle" aria-label="Abrir Menu de Navegação">
+            <span class="hamburger"></span> 
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#contatos-footer">Contatos</a> 
+        </nav>
     </header>
 
+    <section id="home" class="container">
+        <h2>Sobre Nós: A Lenda do Sorriso Perfeito</h2>
+        <p class="introducao">Somos um consultório que opera na área com mais de 20 anos de experiência e trabalhando sempre 
+            de forma profissional para levar o melhor atendimento aos nossos clientes.
+            Somos destaques em serviços de recuperação dentária e prevenção **bucal** (corrigi para bucal, tá?).
+        </p>
+        <a href="#contatos-footer" class="cta-button">Agende sua avaliação!</a>
+    </section>
 
-<section id="home">
-    <h2>Sobre nós: </h2>
-    <p>Somos um consultório que opera na área com mais de 20 anos de experiência e trabalhando sempre 
-        de forma profissional para levar o melhor atendimento aos nossos clientes.
-        Somos destaques em serviços de recuperação dentária e prevenção bocal.
-    </p>
+    <section id="servicos" class="container">
+        <h2>Nossos Serviços: O Arsenal do Sorriso</h2>
+        <ul class="lista-servicos">
+            <li>Prevenção bucal</li>
+            <li>Limpeza bucal</li>
+            <li>Aplicação de flúor e selantes</li>
+            <li>Restaurações</li>
+            <li>Extrações</li>
+            <li>Periodontia</li>
+            <li>Endodontia (Corrigi a grafia)</li>
+            <li>Ortodontia</li>
+            <li>Implantodontia (Corrigi a grafia)</li>
+            <li>Próteses dentárias (No plural fica melhor)</li>
+        </ul>
+    </section>
 
-</section >
+    <section id="galeria" class="container">
+        <h2>Galeria de Casos: O Antes e Depois que Vicia</h2>
+        <div class="galeria-grid">
+            <img src="/imgs/consultorio.jpg" alt="Interior moderno do consultório Sorriso Perfeito" class="img-galeria">
+            </div>
+    </section>
 
-<section id="servicos">
-    <h2>Lista de serviços que oferecemos </h2>
-    
-    <ul>
-        <li>Prevenção bucal</li>
-        <li>Limpeza bocal</li>
-        <li>Aplicação de flúor e selantes</li>
-        <li>Restaurações</li>
-        <li>Extrações</li>
-        <li>Periodontia</li>
-        <li>Endodotia</li>
-        <li>Ortodontia</li>
-        <li>Implandontia</li>
-        <li>Próteses dentária</li>
+    <section id="depoimentos" class="container">
+        <h2>O que Dizem por Aí (Depoimentos)</h2>
+        <div class="depoimentos-grid">
+            <article class="comentario">
+                <p>Atendimento qualificado e muito profissional, em resumo é um ótimo serviço considerando o longo prazo.</p>
+                <cite class="autor-comentario">- Cliente Satisfeito N.1</cite>
+            </article>
+            <article class="comentario">
+                <p>Ótimo tratamento e dedicação profissional, no inicio eu não esperava nada, mas entregaram tudo. Nota 10!</p>
+                <cite class="autor-comentario">- Cliente Satisfeito N.2</cite>
+            </article>
+            </div>
+    </section>
 
-    </ul>
-
-</section >
-
-<section id="galeria">
-
-</section>
-
-
-<section id="depoimentos">
-<div class="comentario">
-    <p>Atendimento qualificado e muito profissional, em resumo é um ótimo serviço considerando o longo prazo</p>
-</div>
-<div class="comentario">
-    <p>Ótimo tratamento e dedicação profissional, no inicio eu não esperava e nada mas entregaram tudo</p>
-</div>
-
-</section>
-
-<section id="contatos">
-
-</section>
-
-<footer id="rodape">
-<h2>Contatos</h2>
-<p>whatsapp:55 0000-0000</p>
-<p>X:@SorrisoPerfeito</p>
-<p>Instagram:@SorrisoPerfeito</p>
-</footer>
+    <footer id="contatos-footer" class="container contatos-footer">
+        <h2>Contatos de Emergência (ou não)</h2>
+        <div class="contatos-info">
+            <p>WhatsApp: 55 (XX) 0000-0000 (Com o DDD, para não dar erro)</p>
+            <p>X (Antigo Twitter): <a href="https://x.com/SorrisoPerfeito" target="_blank">@SorrisoPerfeito</a></p>
+            <p>Instagram: <a href="https://instagram.com/SorrisoPerfeito" target="_blank">@SorrisoPerfeito</a></p>
+        </div>
+        <p class="copy">&copy; 2025 Sorriso Perfeito. Todos os direitos reservados. Feito com Flexbox e pouca paciência.</p>
+    </footer>
 
 </body>
 </html>

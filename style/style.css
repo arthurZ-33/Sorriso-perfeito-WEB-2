@@ -1,71 +1,311 @@
-*{
+:root {
+    --cor-principal: #A9D6E5; 
+    --cor-secundaria: #e0f2f7; 
+    --cor-texto: #333333;
+    --cor-acento: #0A66C2; 
+    --largura-maxima: 1200px;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    
+body {
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6; 
+    color: var(--cor-texto);
 }
 
 
-section{
-    margin-bottom: 50px;
-    padding: 30px 0; 
+.container {
+    max-width: var(--largura-maxima);
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+section {
+    padding: 40px 20px; 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid #eee; 
 }
 
 
-header{
-    background-color: #A9D6E5;
-    padding: 10px 15px;
+header {
+    background-color: var(--cor-principal);
+    padding: 15px 20px;
     width: 100%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 100; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+    font-size: 1.8em; 
+    font-weight: 900;
+    margin: 0; 
 }
 
 
 nav a {
     text-decoration: none; 
-    color: #000; 
-    margin-left: 15px; 
+    color: var(--cor-texto); 
+    margin-left: 20px; 
     font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: var(--cor-acento); 
 }
 
 
-#home, #servicos, #contatos {
-    padding: 20px; 
+h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--cor-acento);
+    border-bottom: 2px solid var(--cor-principal);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#home, #servicos {
     text-align: center;
 }
-
 
 #home h2 { 
     margin-bottom: 20px;
 }
 
-
-#depoimentos{
-    
-    display: flex;
-    justify-content: center;
-    padding: 20px 0; 
+.introducao {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px;
 }
 
-#depoimentos .comentario{
-    background-color: #e0f2f7; 
-    border: 1px solid #A9D6E5;
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-acento);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
     border-radius: 5px;
-    max-width: 400px; 
-    margin: 10px; 
-    padding: 15px;
-    flex-grow: 1; 
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #084c8a; 
 }
 
 
-#rodape{
-    background-color: #A9D6E5; 
-    padding: 15px;
+.lista-servicos {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px; 
+}
+
+.lista-servicos li {
+    background-color: var(--cor-secundaria);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-principal);
+    flex-basis: 300px; 
+    text-align: left;
+    font-weight: 500;
+}
+
+
+
+#galeria {
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+}
+
+.img-galeria {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#depoimentos {
+    background-color: var(--cor-secundaria);
+    padding: 50px 20px;
+}
+
+.depoimentos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.comentario {
+    background-color: white; 
+    border: 1px solid var(--cor-principal);
+    border-radius: 8px;
+    max-width: 450px; 
+    padding: 20px;
+    flex-basis: 400px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.comentario p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.autor-comentario {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: var(--cor-acento);
+}
+
+
+
+.contatos-footer {
+    background-color: var(--cor-principal); 
+    padding: 30px 20px;
     text-align: center;
     margin-top: 50px;
+    
+    
+}
+
+.contatos-footer h2 {
+    color: var(--cor-texto);
+    border-bottom: none;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.contatos-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.contatos-info a {
+    color: var(--cor-acento);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contatos-info a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        margin: 0 8px; 
+        font-size: 0.9em;
+    }
+    
+    .depoimentos-grid {
+        flex-direction: column;
+    }
+
+    .comentario {
+        max-width: 90%; 
+        margin: 10px auto;
+    }
+
+    .lista-servicos li {
+        flex-basis: 100%;
+    }
+}
+
+.menu-toggle {
+    display: none; /* Começa escondido, só aparece no mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 101; /* Garante que ele fique acima da nav */
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-texto);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* --- Adaptando a NAV no Mobile (Estilos da Media Query) --- */
+
+@media (max-width: 768px) {
+    header {
+        /* Garante que o logo e o botão fiquem na mesma linha */
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    #main-nav {
+    
+        display: none; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-principal); 
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #main-nav.active {
+        display: flex; 
+    }
+    nav a {
+        margin: 10px 0;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
 }
